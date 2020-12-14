@@ -1,10 +1,10 @@
 let count=0; //base count
 
 const value = document.querySelector("#value");
-const btns= document.querySelector(".btn");
+const btns= document.querySelectorAll('.btn');
 
 btns.forEach(function (btn) {
-btn.addEventListener('click',function (e){
+btn.addEventListener("click",function (e){
  const styles = e.currentTarget.classList;
  if(styles.contains('decrease')){
      count--;
@@ -22,6 +22,7 @@ btn.addEventListener('click',function (e){
  }
  if(count===0)
  value.style.color="#222";
+ value.textContent=count;
 });
     
 });
